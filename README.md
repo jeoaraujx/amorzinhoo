@@ -1,59 +1,54 @@
-# Amorzinhoo
+# 💖 Amorzinhoo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+Um site romântico feito como presente digital interativo e personalizado. Inspirado em álbuns de memórias artesanais e cartões feitos à mão, este projeto combina estética suave, animações leves e funcionalidades tocantes para celebrar um relacionamento especial.
 
-## Development server
+## ✨ Visão Geral
 
-To start a local development server, run:
+> "O amor é feito de detalhes. Este site é uma coleção deles."
+
+Este projeto é uma experiência visual e emocional pensada para encantar. Foi desenvolvido por mim com atenção aos pequenos gestos que simbolizam carinho, tempo compartilhado e memórias queridas com o meu amor.
+
+### 🌸 Funcionalidades
+
+- 💌 **Título personalizado** com fonte manuscrita encantadora
+- ⏳ **Contador de relacionamento** que mostra a duração do amor em tempo real
+- 📸 **Carrossel de fotos** estilo polaroid, com rotação animada
+- 💬 **Bloco de texto romântico** customizável com mensagens pessoais
+- 🎵 **Player de música** minimalista para criar a trilha sonora perfeita
+- 💖 **Animações suaves** com pétalas e corações flutuantes
+- 📱 **Design responsivo** adaptado para todos os dispositivos
+
+## 🎨 Design e Estilo
+
+- **Inspiração visual**:
+  - Álbuns de scrapbook com elementos sobrepostos
+  - Cartões artesanais com detalhes delicados
+  - Interfaces modernas com animações suaves
+- **Paleta de Cores**:
+  - Rosa claro: `#FFDEE2`
+  - Lilás suave: `#E5DEFF`
+  - Branco puro: `#FFFFFF`
+- **Fontes**:
+  - `Dancing Script` para títulos românticos
+  - `Poppins` para textos limpos e legíveis
+- **Estilo geral**:
+  - Gradientes suaves para transições visuais
+  - Sombras sutis para profundidade e leveza
+  - Elementos flutuantes com animações suaves
+
+## 🛠️ Tecnologias
+
+- **Framework:** Angular 17 com Standalone Components
+- **Estilização:** Tailwind CSS com PostCSS e CSS customizado
+- **Fontes externas:** Google Fonts
+- **Responsividade:** Mobile-first com grid e flex utilities
+- **Deploy-ready:** Estrutura leve, ideal para hospedagem estática (ex: Vercel, Netlify)
+
+## 🚀 Como rodar localmente
 
 ```bash
+git clone https://github.com/seu-usuario/amorzinhoo.git
+cd amorzinhoo
+npm install
 ng serve
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
