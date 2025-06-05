@@ -1,0 +1,33 @@
+<div
+  class="w-full max-w-md mx-auto bg-white/60 backdrop-blur-sm rounded-full shadow-md p-3 my-6 flex items-center space-x-3">
+  <button
+    (click)="togglePlay()"
+    class="bg-[#ffdee280] rounded-full p-2 hover:bg-[#ffdee280] transition-colors"
+    [attr.aria-label]="ariaLabelPlay()">
+    <ng-container *ngIf="isPlaying(); else playIcon">
+      <lucide-icon [img]="Pause" class="h-5 w-5" />
+    </ng-container>
+    <ng-template #playIcon>
+      <lucide-icon [img]="Play" class="h-5 w-5" />
+    </ng-template>
+  </button>
+  <div class="flex-1">
+    <div class="text-sm font-medium truncate">{{ trackName() }}</div>
+    <div class="w-full bg-gray-200 h-1 rounded-full mt-1">
+      <div
+        class="bg-[#ffdee280] h-1 rounded-full"
+        [style.width.%]="progress()"></div>
+    </div>
+  </div>
+  <button
+    (click)="toggleMute()"
+    class="text-gray-600 hover:text-[#ffdee280] transition-colors"
+    [attr.aria-label]="ariaLabelMute()">
+    <ng-container *ngIf="isMuted(); else volumeIcon">
+      <lucide-icon [img]="VolumeX" class="h-5 w-5" />
+    </ng-container>
+    <ng-template #volumeIcon>
+      <lucide-icon [img]="Volume2" class="h-5 w-5" />
+    </ng-template>
+  </button>
+</div>

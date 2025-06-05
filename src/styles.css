@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Outfit:wght@365&display=swap');
+
+@import "tailwindcss";
+
+:root {
+    --background: hsl(348, 100%, 98%);
+    --foreground: hsl(348, 10%, 20%);
+
+    --card: hsl(0, 0%, 100%);
+    --card-foreground: hsl(348, 10%, 20%);
+
+    --popover: hsl(0, 0%, 100%);
+    --popover-foreground: hsl(348, 10%, 20%);
+
+    --primary: hsl(348, 80%, 85%);
+    --primary-foreground: hsl(348, 20%, 20%);
+
+    --secondary: hsl(270, 70%, 95%);
+    --secondary-foreground: hsl(270, 20%, 20%);
+
+    --muted: hsl(348, 5%, 90%);
+    --muted-foreground: hsl(348, 5%, 40%);
+
+    --accent: hsl(270, 80%, 90%);
+    --accent-foreground: hsl(270, 20%, 20%);
+
+    --destructive: hsl(0, 84.2%, 60.2%);
+    --destructive-foreground: hsl(210, 40%, 98%);
+
+    --border: hsl(348, 20%, 85%);
+    --input: hsl(348, 20%, 85%);
+    --ring: hsl(348, 80%, 70%);
+
+    --radius: 1rem;
+}
+
+/* Aplicação global da borda */
+* {
+    border-color: var(--border);
+}
+
+.dancing-script-font {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #f6f5f7, #ffffff);
+    color: var(--foreground);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+
+/* Animação flutuante */
+@keyframes float-random {
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-15px) translateX(5px) rotate(5deg);
+    }
+
+    50% {
+        transform: translateY(-5px) translateX(15px) rotate(10deg);
+    }
+
+    75% {
+        transform: translateY(-10px) translateX(-10px) rotate(-5deg);
+    }
+}
