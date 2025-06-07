@@ -1,0 +1,7 @@
+<div class="fixed inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
+    @for (item of items(); track item.id) {
+    <div [ngStyle]="floatingStyles(item)">
+        {{ item.symbol }}
+    </div>
+    }
+</div>

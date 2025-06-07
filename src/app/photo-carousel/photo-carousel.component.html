@@ -5,8 +5,7 @@
       [ngStyle]="photo.style"
       class="absolute top-0 left-0 w-full h-full transition-all duration-500 ease-in-out transform-gpu">
       <div
-        class="absolute inset-0 bg-white shadow-md p-2 transform transition-all duration-300 flex items-center justify-center h-full rounded-xl overflow-hidden"
-        style="border-color: #FFDEE2; border-width: 2px;">
+        class="absolute inset-0 bg-white shadow-md p-2 transform transition-all duration-300 flex items-center justify-center h-full rounded-xl overflow-hidden">
         <img
           [src]="photo.src"
           [alt]="photo.alt"
@@ -33,8 +32,8 @@
     <button
       (click)="currentIndex.set(i)"
       [ngClass]="{
-        'h-2 w-4 bg-[#e5deff80]': i === currentIndex(),
-        'h-2 w-2 bg-[#e5deff80]/50': i !== currentIndex()
+        'h-2 w-4 bg-[#d3c7fd]': i === currentIndex(),
+        'h-2 w-2 bg-[#f5c9ce80]/50': i !== currentIndex()
       }"
       class="rounded-full transition-all"
       [attr.aria-label]="'Ir para foto ' + (i + 1)"></button>

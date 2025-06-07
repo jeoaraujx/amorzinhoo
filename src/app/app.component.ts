@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { RelationshipCounterComponent } from './relationship-counter/relationship-counter.component';
 import { PhotoCarouselComponent } from './photo-carousel/photo-carousel.component';
 import { MusicPlayerComponent } from './music-player/music-player.component';
+import { FloatingEmojisComponent } from './floating-emojis/floating-emojis.component';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { MusicPlayerComponent } from './music-player/music-player.component';
     RelationshipCounterComponent,
     PhotoCarouselComponent,
     MusicPlayerComponent,
+    FloatingEmojisComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -24,15 +26,15 @@ export class AppComponent {
 
   photos = [
     {
-      src: '/img_1.jpg',
+      src: '/placeholder.svg',
       alt: 'Nossa primeira foto juntos',
     },
     {
-      src: '/img_2.jpg',
+      src: '/placeholder.svg',
       alt: 'Aniversário especial',
     },
     {
-      src: '/img_3.jpg',
+      src: '/placeholder.svg',
       alt: 'Viagem inesquecível',
     },
   ];

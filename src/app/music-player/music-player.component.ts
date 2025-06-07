@@ -16,7 +16,6 @@ import {
   VolumeX,
   Volume2,
 } from 'lucide-angular';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 interface MusicPlayer {
   audioSrc: string;
