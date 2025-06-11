@@ -30,7 +30,7 @@ export class FloatingEmojisComponent {
     effect((onCleanup) => {
       this.intervalId = setInterval(() => {
         this.updatePositions();
-      }, 15000);
+      }, 500000);
 
       onCleanup(() => {
         if (this.intervalId) {

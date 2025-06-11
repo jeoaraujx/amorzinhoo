@@ -34,7 +34,7 @@ export class PhotoCarouselComponent {
   constructor() {
     const interval = setInterval(() => {
       this.nextPhoto();
-    }, 5000);
+    }, 15000);
 
     this.destroyRef.onDestroy(() => clearInterval(interval));
   }
