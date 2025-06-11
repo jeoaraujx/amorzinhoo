@@ -24,18 +24,15 @@ export class AppComponent {
 
   startDate = new Date('2024-04-28T01:00:00');
 
-  photos = Array.from({ length: 26 }, (_, i) => {
-    const num = i + 1;
-    return {
-      src: `/img_${num}.jpg`,
-      alt: 'Só nós dois',
-    };
-  });
+  photos = Array.from({ length: 26 }, (_, i) => ({
+    src: `/assets/img_${i + 1}.webp`,
+    alt: 'Só nós dois',
+  }));
 
   currentYear = new Date().getFullYear();
 
   track = {
-    audioSrc: '/Vanessa da Mata - Ainda Bem.mp3',
+    audioSrc: '/xxx',
     trackName: 'Nossa música especial',
   };
 }
