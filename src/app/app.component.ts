@@ -24,20 +24,13 @@ export class AppComponent {
 
   startDate = new Date('2024-04-28T01:00:00');
 
-  photos = [
-    {
-      src: '/placeholder.svg',
-      alt: 'Nossa primeira foto juntos',
-    },
-    {
-      src: '/placeholder.svg',
-      alt: 'Aniversário especial',
-    },
-    {
-      src: '/placeholder.svg',
-      alt: 'Viagem inesquecível',
-    },
-  ];
+  photos = Array.from({ length: 26 }, (_, i) => {
+    const num = i + 1;
+    return {
+      src: `/img_${num}.jpg`,
+      alt: 'Só nós dois',
+    };
+  });
 
   currentYear = new Date().getFullYear();
 
