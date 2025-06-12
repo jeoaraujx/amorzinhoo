@@ -27,7 +27,7 @@ export class AppComponent {
   photos = Array.from({ length: 26 }, (_, i) => {
     const num = i + 1;
     return {
-      src: `/img_${num}.jpg`,
+      src: `/assets/img_${num}.webp`,
       alt: 'Só nós dois',
     };
   });
@@ -35,7 +35,7 @@ export class AppComponent {
   currentYear = new Date().getFullYear();
 
   track = {
-    audioSrc: '/Vanessa da Mata - Ainda Bem.mp3',
+    audioSrc: '/Vanessa da Mata - Ainda Bem.mp3x',
     trackName: 'Nossa música especial',
   };
 }
