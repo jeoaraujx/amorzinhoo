@@ -1,32 +1,64 @@
-<div class="w-full max-w-xl mx-auto my-6 relative">
-  <div class="relative h-80 md:h-96 overflow-visible">
-    @for(photo of photosWithStyles(); track photo.index; let i = $index) {
-    <div [ngStyle]="photo.style"
-      class="absolute top-0 left-0 w-full h-full transition-all duration-500 ease-in-out transform-gpu">
-      <div
-        class="absolute inset-0 bg-white shadow-md p-2 transform transition-all duration-300 flex items-center justify-center h-full rounded-xl overflow-hidden">
-        <img [src]="photo.src" [alt]="photo.alt" class="w-full h-full object-cover" />
+<ng-container *ngIf="photos.length > 0; else noPhotos">
+  <div class="w-full max-w-xl mx-auto my-6 relative">
+    <div class="relative h-80 md:h-96 overflow-visible">
+      @for (photo of photosWithStyles(); track photo.index) {
+      <div [ngStyle]="photo.style"
+        class="absolute top-0 left-0 w-full h-full transition-all duration-500 ease-in-out transform-gpu">
+        <div
+          class="absolute inset-0 bg-white shadow-md p-2 transform transition-all duration-300 flex items-center justify-center h-full rounded-xl overflow-hidden">
+          <img [src]="photo.src" [alt]="photo.alt" class="w-full h-full object-cover" />
+        </div>
       </div>
+      }
     </div>
-    }
-  </div>
-  <button (click)="prevPhoto()"
-    class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md z-20 hover:bg-[#f5c9ce80]/50 transition-colors cursor-pointer"
-    aria-label="Foto anterior">
-    <lucide-icon [img]="ChevronLeft"></lucide-icon>
-  </button>
-  <button (click)="nextPhoto()"
-    class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md z-20 hover:bg-[#f5c9ce80]/50 transition-colors cursor-pointer"
-    aria-label="Próxima foto">
-    <lucide-icon [img]="ChevronRight"></lucide-icon>
-  </button>
 
-  <div class="flex justify-center mt-4 space-x-2">
-    @for (_ of photosWithStyles(); track _; let i = $index) {
-    <button (click)="currentIndex.set(i)" [ngClass]="{
-        'h-2 w-4 bg-[#d3c7fd]': i === currentIndex(),
-        'h-2 w-2 bg-[#f5c9ce80]/50': i !== currentIndex()
-      }" class="rounded-full transition-all" [attr.aria-label]="'Ir para foto ' + (i + 1)"></button>
-    }
+    <button (click)="prevPhoto()"
+      class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md z-20 hover:bg-[#f5c9ce80]/50 transition-colors cursor-pointer"
+      aria-label="Foto anterior">
+      <lucide-icon [img]="ChevronLeft"></lucide-icon>
+    </button>
+
+    <button (click)="nextPhoto()"
+      class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md z-20 hover:bg-[#f5c9ce80]/50 transition-colors cursor-pointer"
+      aria-label="Próxima foto">
+      <lucide-icon [img]="ChevronRight"></lucide-icon>
+    </button>
+
+    <div class="flex justify-center mt-4 space-x-2">
+      @for (_ of photosWithStyles(); track _; let i = $index) {
+      <button (click)="currentIndex.set(i)" [ngClass]="{
+              'h-2 w-4 bg-[#d3c7fd]': i === currentIndex(),
+              'h-2 w-2 bg-[#f5c9ce80]/50': i !== currentIndex()
+            }" class="rounded-full transition-all" [attr.aria-label]="'Ir para foto ' + (i + 1)">
+      </button>
+      }
+    </div>
   </div>
-</div>
+</ng-container>
+<ng-template #noPhotos>
+  <div class="w-full max-w-xl mx-auto my-6 relative">
+    <div class="relative h-80 md:h-96 overflow-visible">
+      @for (photo of photosWithStyles(); track photo.index) {
+      <div [ngStyle]="photo.style"
+        class="absolute top-0 left-0 w-full h-full transition-all duration-500 ease-in-out transform-gpu">
+        <div
+          class="absolute inset-0 bg-white shadow-md p-2 transform transition-all duration-300 flex items-center justify-center h-full rounded-xl overflow-hidden">
+          <img src="placeholder.svg" alt="Carregando fotos" class="w-full h-full object-cover" />
+        </div>
+      </div>
+      }
+    </div>
+
+    <button (click)="prevPhoto()"
+      class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md z-20 hover:bg-[#f5c9ce80]/50 transition-colors cursor-pointer"
+      aria-label="Foto anterior">
+      <lucide-icon [img]="ChevronLeft"></lucide-icon>
+    </button>
+
+    <button (click)="nextPhoto()"
+      class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md z-20 hover:bg-[#f5c9ce80]/50 transition-colors cursor-pointer"
+      aria-label="Próxima foto">
+      <lucide-icon [img]="ChevronRight"></lucide-icon>
+    </button>
+  </div>
+</ng-template>
