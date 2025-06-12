@@ -40,10 +40,3 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-public/*.jpg
-public/assets
-<<<<<<< HEAD
-=======
-package-lock.json
-
->>>>>>> aac3f9375a5aaeea2ddf0ea5e295a3e078a974d4
