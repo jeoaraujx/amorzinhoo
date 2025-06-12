@@ -32,7 +32,7 @@ export class AppComponent {
   currentYear = new Date().getFullYear();
 
   track = {
-    audioSrc: '/xxx',
+    audioSrc: '/Vanessa da Mata - Ainda Bem.mp3',
     trackName: 'Nossa música especial',
   };
 }
